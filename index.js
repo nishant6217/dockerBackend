@@ -1,7 +1,10 @@
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 const port = 8833;
 
@@ -14,4 +17,4 @@ app.post("/api/login", (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`Server running on port${port} `));
+app.listen(port, () => console.log(`Server running on port ${port}`));
