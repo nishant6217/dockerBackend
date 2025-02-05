@@ -1,19 +1,19 @@
-FROM node:16
+    FROM node:16
 
 
-WORKDIR /app
+    WORKDIR /app
 
 
-COPY package*.json ./
+    COPY package*.json ./
 
 
-RUN npm install
+    RUN npm install
 
 
-COPY . .
+    COPY . .
 
 
-EXPOSE 8833
+    EXPOSE 8833
 
 
-CMD ["node", "index.js"]
+    CMD ["node", "index.js"]
